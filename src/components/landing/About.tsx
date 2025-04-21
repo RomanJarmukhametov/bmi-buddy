@@ -1,6 +1,9 @@
 import { Activity, Heart } from "lucide-react";
+import { content } from "@/data/content";
 
 export default function About() {
+  const { about } = content;
+
   return (
     <section
       className="py-12 sm:py-16 px-4 sm:px-8 bg-gray-100 text-gray-800"
@@ -9,13 +12,9 @@ export default function About() {
         <h2
           id="bmi-importance"
           className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">
-          Why BMI Matters
+          {about.heading}
         </h2>
-        <p className="text-base sm:text-lg mb-6">
-          Body Mass Index (BMI) is a simple calculation that helps you
-          understand your body weight in relation to your height. It&apos;s a
-          useful tool for assessing your overall health.
-        </p>
+        <p className="text-base sm:text-lg mb-6">{about.description}</p>
         <div
           className="flex flex-col sm:flex-row justify-center gap-8 sm:gap-6"
           aria-label="Benefits of tracking BMI">
@@ -28,7 +27,7 @@ export default function About() {
               className="mb-2"
               aria-hidden="true"
             />
-            <p className="text-sm sm:text-base">Track your health</p>
+            <p className="text-sm sm:text-base">{about.benefits.trackHealth}</p>
           </div>
           <div
             className="flex flex-col items-center"
@@ -39,7 +38,9 @@ export default function About() {
               className="mb-2"
               aria-hidden="true"
             />
-            <p className="text-sm sm:text-base">Stay informed</p>
+            <p className="text-sm sm:text-base">
+              {about.benefits.stayInformed}
+            </p>
           </div>
         </div>
       </div>

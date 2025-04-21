@@ -7,8 +7,10 @@ import Button from "./Button";
 import BMIResult from "./BMIResult";
 import { motion } from "motion/react";
 import { z } from "zod";
+import { content } from "@/data/content";
 
 export default function BMIForm() {
+  const { bmiForm } = content;
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
   const [errors, setErrors] = useState<{ height?: string; weight?: string }>(
@@ -57,18 +59,16 @@ export default function BMIForm() {
         aria-label="BMI Calculator"
         noValidate>
         <fieldset>
-          <legend className="sr-only">
-            Enter your height and weight details
-          </legend>
+          <legend className="sr-only">{bmiForm.legend}</legend>
 
           <Input
-            label="Height"
+            label={bmiForm.height.label}
             id="height"
             type="number"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
-            placeholder="Enter your height"
-            unit="cm"
+            placeholder={bmiForm.height.placeholder}
+            unit={bmiForm.height.unit}
             error={errors.height}
             min={50}
             max={300}
@@ -78,13 +78,13 @@ export default function BMIForm() {
           />
 
           <Input
-            label="Weight"
+            label={bmiForm.weight.label}
             id="weight"
             type="number"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
-            placeholder="Enter your weight"
-            unit="kg"
+            placeholder={bmiForm.weight.placeholder}
+            unit={bmiForm.weight.unit}
             error={errors.weight}
             min={10}
             max={500}
@@ -96,8 +96,8 @@ export default function BMIForm() {
           <Button
             type="submit"
             className="w-full mt-4"
-            aria-label="Calculate your BMI">
-            Calculate BMI
+            aria-label={bmiForm.submitAriaLabel}>
+            {bmiForm.submitButton}
           </Button>
         </fieldset>
       </form>

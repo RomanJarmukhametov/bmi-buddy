@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
-
 import Card from "../ui/Card";
 import BMIForm from "../ui/BMIForm";
+import { content } from "@/data/content";
 
 export default function CTA() {
+  const { cta } = content;
+
   return (
     <section
       id="calculator-section"
@@ -21,11 +23,11 @@ export default function CTA() {
             <h2
               id="calculator-heading"
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Calculate Your <span className="text-blue-600">BMI</span> Now
+              Calculate Your{" "}
+              <span className="text-blue-600">{cta.headingHighlight}</span> Now
             </h2>
             <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto mb-6 sm:mb-10 px-2">
-              Enter your height and weight below to instantly get your BMI and
-              understand what it means for your health.
+              {cta.description}
             </p>
           </motion.div>
         </div>

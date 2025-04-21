@@ -3,8 +3,11 @@
 import { Scale, Activity, Heart } from "lucide-react";
 import { motion } from "motion/react";
 import Button from "../ui/Button";
+import { content } from "@/data/content";
 
 export default function Hero() {
+  const { hero } = content;
+
   const handleScrollToCalculator = () => {
     document.getElementById("calculator-section")?.scrollIntoView({
       behavior: "smooth",
@@ -25,24 +28,22 @@ export default function Hero() {
               <h1
                 id="hero-heading"
                 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 md:mb-6">
-                Understand Your Body,
+                {hero.heading}
                 <span className="text-blue-600 block sm:inline">
                   {" "}
-                  Track Your Health
+                  {hero.headingHighlight}
                 </span>
               </h1>
 
               <p className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 max-w-lg text-center md:text-left">
-                BMI Buddy helps you easily calculate and track your Body Mass
-                Index, providing personalized insights for a healthier
-                lifestyle.
+                {hero.description}
               </p>
 
               <Button
                 onClick={handleScrollToCalculator}
                 className="text-base md:text-lg w-full sm:w-auto"
-                aria-label="Calculate your BMI - scroll to calculator section">
-                Calculate your BMI
+                aria-label={hero.buttonAriaLabel}>
+                {hero.buttonText}
               </Button>
             </motion.div>
           </div>

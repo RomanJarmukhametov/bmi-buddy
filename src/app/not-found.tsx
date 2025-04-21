@@ -6,8 +6,11 @@ import Button from "@/components/ui/Button";
 import { motion } from "framer-motion";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
+import { content } from "@/data/content";
 
 export default function NotFound() {
+  const { notFound } = content;
+
   return (
     <>
       <Header />
@@ -28,24 +31,21 @@ export default function NotFound() {
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Page not found
+            {notFound.title}
           </h1>
 
-          <p className="text-lg text-gray-600 mb-8">
-            Sorry, we couldn&apos;t find the page you&apos;re looking for. It
-            might have been moved or doesn&apos;t exist.
-          </p>
+          <p className="text-lg text-gray-600 mb-8">{notFound.description}</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               variant="primary"
               className="flex items-center justify-center gap-2"
-              aria-label="Go back to home page">
+              aria-label={notFound.buttonAriaLabel}>
               <Home
                 size={18}
                 aria-hidden="true"
               />
-              <Link href="/">Return to homepage</Link>
+              <Link href="/">{notFound.buttonText}</Link>
             </Button>
           </div>
         </motion.div>

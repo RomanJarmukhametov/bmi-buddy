@@ -3,8 +3,11 @@
 import { Activity } from "lucide-react";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { content } from "@/data/content";
 
 export default function Header() {
+  const { common } = content;
+
   const handleScrollToCalculator = () => {
     document.getElementById("calculator-section")?.scrollIntoView({
       behavior: "smooth",
@@ -19,7 +22,7 @@ export default function Header() {
         <div className="flex items-center justify-between py-3 md:py-4">
           <Link
             href="/"
-            aria-label="BMI Buddy Home">
+            aria-label={`${common.appName} Home`}>
             <motion.div
               className="flex items-center gap-1 md:gap-2"
               initial={{ opacity: 0 }}
@@ -31,7 +34,7 @@ export default function Header() {
                 aria-hidden="true"
               />
               <span className="text-lg md:text-xl font-bold text-gray-900">
-                BMI Buddy
+                {common.appName}
               </span>
             </motion.div>
           </Link>

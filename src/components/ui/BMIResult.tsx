@@ -1,6 +1,7 @@
 import Card from "./Card";
 import { Activity, AlertCircle, ThumbsUp, Heart } from "lucide-react";
 import { BMIResult as BMIResultType } from "@/lib/calculateBMI";
+import { content } from "@/data/content";
 
 interface BMIResultProps {
   result: BMIResultType;
@@ -8,6 +9,7 @@ interface BMIResultProps {
 
 export default function BMIResult({ result }: BMIResultProps) {
   const { bmi, category, message } = result;
+  const { bmiResult } = content;
 
   const getCategoryColors = () => {
     switch (category) {
@@ -69,11 +71,11 @@ export default function BMIResult({ result }: BMIResultProps) {
         <h3
           className="text-2xl font-bold mb-2"
           id="bmi-result-heading">
-          Your BMI Result
+          {bmiResult.heading}
         </h3>
         <div
           className="text-4xl font-bold text-blue-600"
-          aria-label={`BMI value: ${bmi}`}>
+          aria-label={bmiResult.ariaLabel.replace("{value}", bmi.toString())}>
           {bmi}
         </div>
       </div>
@@ -81,14 +83,17 @@ export default function BMIResult({ result }: BMIResultProps) {
       <div
         className={`rounded-lg p-3 flex items-center mb-3 ${getCategoryColors()}`}
         role="status"
-        aria-label={`BMI Category: ${category}`}>
+        aria-label={bmiResult.categoryAriaLabel.replace(
+          "{category}",
+          category
+        )}>
         {getCategoryIcon()}
         <span className="font-medium">{category}</span>
       </div>
 
       <p
         className="text-gray-700"
-        aria-label="Health recommendation">
+        aria-label={bmiResult.healthRecommendationAriaLabel}>
         {message}
       </p>
     </Card>

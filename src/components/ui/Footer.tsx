@@ -4,9 +4,11 @@ import { Activity } from "lucide-react";
 import Link from "next/link";
 import LinkedInIcon from "@/components/ui/LinkedInIcon";
 import WebIcon from "@/components/ui/WebIcon";
+import { content } from "@/data/content";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { common, footer } = content;
 
   return (
     <footer
@@ -20,7 +22,7 @@ export default function Footer() {
               className="text-blue-400"
               aria-hidden="true"
             />
-            <span className="text-xl font-bold">BMI Buddy</span>
+            <span className="text-xl font-bold">{common.appName}</span>
           </div>
 
           <div
@@ -114,7 +116,7 @@ export default function Footer() {
           </nav>
 
           <div className="text-center text-gray-500 text-sm">
-            <p>&copy; {currentYear} BMI Buddy. All rights reserved.</p>
+            <p>{footer.copyright.replace("2025", currentYear.toString())}</p>
           </div>
         </div>
       </div>
