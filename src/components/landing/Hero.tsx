@@ -2,7 +2,7 @@
  * Hero component for the landing page.
  * Features an animated heading, description, and interactive icons with motion effects.
  * Includes a call-to-action button that smoothly scrolls to the BMI calculator section.
- * 
+ *
  * @returns {JSX.Element} The rendered Hero component with animation effects
  */
 "use client";

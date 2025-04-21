@@ -2,7 +2,7 @@
  * Validation schemas for the BMI Buddy application forms.
  * Uses Zod to create strongly-typed validation rules with
  * helpful error messages for user inputs.
- * 
+ *
  * @module validationSchemas
  */
 import { z } from "zod";

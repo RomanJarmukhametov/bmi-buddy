@@ -1,17 +1,17 @@
 /**
  * Generates a sitemap for the BMI Buddy application.
- * This file follows Next.js App Router conventions to automatically 
+ * This file follows Next.js App Router conventions to automatically
  * generate a sitemap.xml file at build time.
- * 
+ *
  * The sitemap includes:
  * - Homepage (/)
  * - Privacy Policy (/privacy)
- * 
+ *
  * Each URL includes:
  * - Last modified date (current date)
  * - Change frequency (monthly/yearly)
  * - Priority (1.0/0.8)
- * 
+ *
  * @returns {MetadataRoute.Sitemap} Array of sitemap entries for the application
  */
 import { MetadataRoute } from "next";

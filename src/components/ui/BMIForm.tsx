@@ -2,13 +2,13 @@
  * BMI calculator form component.
  * Handles user input for height and weight, performs validation using Zod schemas,
  * calculates BMI results, and displays them with animation effects.
- * 
+ *
  * Features:
  * - Input validation with error messages
  * - Real-time BMI calculation
  * - Animated transitions for results
  * - Accessibility attributes for screen readers
- * 
+ *
  * @returns {JSX.Element} The rendered BMI calculator form with validation and results display
  */
 "use client";

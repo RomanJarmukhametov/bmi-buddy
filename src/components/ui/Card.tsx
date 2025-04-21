@@ -2,7 +2,7 @@
  * Card component for displaying content in a visually distinct container.
  * Provides consistent styling with rounded corners and shadow effects
  * for content blocks throughout the application.
- * 
+ *
  * @param {Object} props - Component props
  * @param {ReactNode} props.children - Card content
  * @param {string} [props.className] - Additional CSS classes

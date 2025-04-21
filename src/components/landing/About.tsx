@@ -1,8 +1,8 @@
 /**
  * About component that explains the importance of BMI tracking.
- * Displays key benefits with meaningful icons to help users understand 
+ * Displays key benefits with meaningful icons to help users understand
  * the value of monitoring their body mass index.
- * 
+ *
  * @returns {JSX.Element} The rendered About section with benefit icons
  */
 import { Activity, Heart } from "lucide-react";

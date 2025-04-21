@@ -1,7 +1,7 @@
 /**
  * Reusable input component with support for validation, measurement units, and accessibility.
  * Handles different input types, validation states, and provides clear error feedback.
- * 
+ *
  * Features:
  * - Required field indication
  * - Validation error display
@@ -9,7 +9,7 @@
  * - Hover and focus states
  * - Comprehensive accessibility attributes
  * - Min/max value constraints
- * 
+ *
  * @param {Object} props - Component props
  * @param {string} props.label - Input label text
  * @param {string} props.id - Unique identifier for the input

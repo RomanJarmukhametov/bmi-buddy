@@ -2,7 +2,7 @@
  * Home page component for the BMI Buddy application.
  * This is the main landing page that includes the hero section,
  * about section, and call-to-action with the BMI calculator.
- * 
+ *
  * @returns {JSX.Element} The rendered Home page component with header, main content sections, and footer
  */
 import Hero from "@/components/landing/Hero";

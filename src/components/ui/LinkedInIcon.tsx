@@ -1,7 +1,7 @@
 /**
  * LinkedIn social media icon component.
  * SVG implementation of the LinkedIn logo used in the footer for social links.
- * 
+ *
  * @param {Object} props - SVG props passed directly to the svg element
  * @returns {JSX.Element} LinkedIn icon SVG with current color inheritance
  */

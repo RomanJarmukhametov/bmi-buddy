@@ -13,17 +13,20 @@ A simple and intuitive tool to calculate and track your Body Mass Index (BMI), p
 ## Project Structure
 
 ### Pages
+
 - `/` - Homepage with BMI calculator
 - `/privacy` - Privacy policy page
 
 ### Components
 
 #### Landing Components
+
 - `Hero.tsx` - Hero section with animated illustrations and call to action
 - `About.tsx` - Information about BMI importance with benefit icons
 - `CTA.tsx` - Call to action section with the BMI calculator form
 
 #### UI Components
+
 - `BMIForm.tsx` - Form component for height and weight input with validation
 - `BMIResult.tsx` - Displays BMI calculation results and health classification
 - `Button.tsx` - Reusable button component
@@ -33,11 +36,13 @@ A simple and intuitive tool to calculate and track your Body Mass Index (BMI), p
 - `Input.tsx` - Form input component with validation support
 
 ### Libraries and Utilities
+
 - `calculateBMI.ts` - Logic for BMI calculations and result interpretation
 - `validationSchemas.ts` - Zod schemas for form validation
 - `content.ts` - Centralized content data for the application
 
 ### SEO and Metadata
+
 - `robots.ts` - Generated robots.txt for search engine crawling control
 - `sitemap.ts` - Generated sitemap for improved search engine indexing
 

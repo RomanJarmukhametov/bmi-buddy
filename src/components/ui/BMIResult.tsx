@@ -2,13 +2,13 @@
  * BMI Result component for displaying calculated BMI values.
  * Shows the BMI value, category classification (Underweight, Normal, Overweight, Obese),
  * and provides tailored health messages based on the result.
- * 
+ *
  * Features:
  * - Color-coded categories for visual clarity
  * - Category-specific icons for better understanding
  * - Descriptive health message based on BMI value
  * - Comprehensive accessibility attributes
- * 
+ *
  * @param {Object} props - Component props
  * @param {BMIResultType} props.result - BMI calculation result containing bmi value, category and message
  * @returns {JSX.Element} Rendered BMI result card
