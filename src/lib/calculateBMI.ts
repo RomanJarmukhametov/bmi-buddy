@@ -1,3 +1,16 @@
+/**
+ * BMI calculation module for the BMI Buddy application.
+ * Provides validated input and output types, calculation logic, 
+ * and health category determination based on BMI value.
+ * 
+ * Follows WHO BMI classification:
+ * - Underweight: BMI < 18.5
+ * - Normal: BMI 18.5-24.9
+ * - Overweight: BMI 25-29.9
+ * - Obese: BMI ≥ 30
+ * 
+ * @module calculateBMI
+ */
 import { z } from "zod";
 
 // Define validation schemas for input and output
@@ -19,6 +32,18 @@ export type BMIResult = z.infer<typeof BMIResultSchema>;
 // Type for the allowed category values
 type BMICategory = "Underweight" | "Normal" | "Overweight" | "Obese";
 
+/**
+ * Calculates Body Mass Index (BMI) based on height in cm and weight in kg.
+ * Validates inputs, computes the BMI value, determines the health category,
+ * and provides a tailored health message based on the result.
+ * 
+ * Formula used: BMI = weight(kg) / (height(m))²
+ * 
+ * @param {number} height - Height in centimeters
+ * @param {number} weight - Weight in kilograms
+ * @returns {BMIResult} BMI result including the numeric value, category, and health message
+ * @throws {Error} Throws an error if inputs are invalid (negative or zero values)
+ */
 export function calculateBMI(height: number, weight: number): BMIResult {
   // Validate inputs
   const validatedInput = BMIInputSchema.parse({ height, weight });

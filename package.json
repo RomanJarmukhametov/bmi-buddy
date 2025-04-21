@@ -1,7 +1,11 @@
 {
-  "name": "frontend",
+  "name": "bmi-buddy",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Roman Jarmukhametov",
+    "email": "hello@ideaflow.studio"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",

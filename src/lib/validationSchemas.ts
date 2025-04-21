@@ -1,6 +1,20 @@
+/**
+ * Validation schemas for the BMI Buddy application forms.
+ * Uses Zod to create strongly-typed validation rules with
+ * helpful error messages for user inputs.
+ * 
+ * @module validationSchemas
+ */
 import { z } from "zod";
 
-// BMI calculation validation schema
+/**
+ * Validation schema for BMI calculator form inputs.
+ * Validates that:
+ * - Height and weight are provided (not empty)
+ * - Values are valid numbers
+ * - Height is between 0-300 cm
+ * - Weight is between 0-500 kg
+ */
 export const BMISchema = z.object({
   height: z
     .string()
@@ -30,7 +44,12 @@ export const BMISchema = z.object({
 
 export type BMIFormData = z.infer<typeof BMISchema>;
 
-// Contact form validation schema (for future use)
+/**
+ * Validation schema for contact form inputs.
+ * Validates that:
+ * - Name, email, and message are provided (not empty)
+ * - Email is a valid email address
+ */
 export const ContactSchema = z.object({
   name: z.string().nonempty("Name is required"),
   email: z

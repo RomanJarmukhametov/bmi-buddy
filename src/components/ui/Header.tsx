@@ -1,3 +1,17 @@
+/**
+ * Header component for the BMI Buddy application.
+ * Features a sticky navigation bar with branding and navigation links
+ * that remains visible as the user scrolls through the application.
+ * 
+ * Features:
+ * - App branding with animated icon
+ * - Navigation links to key sections
+ * - Smooth scroll functionality to the calculator section
+ * - Responsive design for different screen sizes
+ * - Accessibility attributes for navigation elements
+ * 
+ * @returns {JSX.Element} Rendered header with navigation
+ */
 "use client";
 
 import { Activity } from "lucide-react";

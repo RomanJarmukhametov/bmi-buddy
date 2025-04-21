@@ -1,3 +1,18 @@
+/**
+ * Reusable button component with different style variants.
+ * Supports primary and secondary styles, hover and focus states,
+ * and accessibility attributes.
+ *
+ * @param {Object} props - Component props
+ * @param {ReactNode} props.children - Button content
+ * @param {Function} [props.onClick] - Click handler function
+ * @param {'button' | 'submit' | 'reset'} [props.type='button'] - HTML button type
+ * @param {string} [props.className] - Additional CSS classes
+ * @param {'primary' | 'secondary'} [props.variant='primary'] - Button style variant
+ * @param {boolean} [props.disabled=false] - Disabled state
+ * @param {string} [props.aria-label] - Accessibility label
+ * @returns {JSX.Element} Styled button component
+ */
 "use client";
 
 import { ReactNode } from "react";

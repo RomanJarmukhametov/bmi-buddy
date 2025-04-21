@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BMI Buddy
 
-## Getting Started
+A simple and intuitive tool to calculate and track your Body Mass Index (BMI), providing insights to help you maintain a healthy lifestyle.
 
-First, run the development server:
+## Features
+
+- **Interactive BMI Calculator:** Quick and accurate BMI calculation with height and weight inputs
+- **Health Categorization:** Automatic categorization (Underweight, Normal, Overweight, Obese)
+- **Personalized Recommendations:** Tailored health insights based on your BMI result
+- **Responsive Design:** Optimized for all devices from mobile to desktop
+- **Accessibility:** Fully accessible with screen reader support and keyboard navigation
+
+## Project Structure
+
+### Pages
+- `/` - Homepage with BMI calculator
+- `/privacy` - Privacy policy page
+
+### Components
+
+#### Landing Components
+- `Hero.tsx` - Hero section with animated illustrations and call to action
+- `About.tsx` - Information about BMI importance with benefit icons
+- `CTA.tsx` - Call to action section with the BMI calculator form
+
+#### UI Components
+- `BMIForm.tsx` - Form component for height and weight input with validation
+- `BMIResult.tsx` - Displays BMI calculation results and health classification
+- `Button.tsx` - Reusable button component
+- `Card.tsx` - Container component with consistent styling
+- `Footer.tsx` - Site footer with links and copyright information
+- `Header.tsx` - Site header with navigation
+- `Input.tsx` - Form input component with validation support
+
+### Libraries and Utilities
+- `calculateBMI.ts` - Logic for BMI calculations and result interpretation
+- `validationSchemas.ts` - Zod schemas for form validation
+- `content.ts` - Centralized content data for the application
+
+### SEO and Metadata
+- `robots.ts` - Generated robots.txt for search engine crawling control
+- `sitemap.ts` - Generated sitemap for improved search engine indexing
+
+## Development
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js 15** - React framework with App Router
+- **React 19** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS 4** - Utility-first CSS
+- **Zod** - Form validation
+- **Motion** - Animation library
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contact
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Have questions or feedback? Contact us at hello@ideaflow.studio

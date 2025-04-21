@@ -1,3 +1,11 @@
+/**
+ * Call-to-Action (CTA) component containing the BMI calculator.
+ * Features a heading, description text, and the BMI calculator form
+ * wrapped in an animated container with scroll-triggered animations.
+ * This section is targeted by the scroll-to functionality from the hero section.
+ * 
+ * @returns {JSX.Element} The rendered CTA section with BMI calculator
+ */
 "use client";
 
 import { motion } from "motion/react";

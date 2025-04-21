@@ -1,3 +1,18 @@
+/**
+ * Footer component for the BMI Buddy application.
+ * Contains branding, navigation links, social media links, contact information,
+ * and copyright notice with dynamically calculated current year.
+ * 
+ * Features:
+ * - App branding with icon
+ * - Social media links (LinkedIn, website)
+ * - About section with app description
+ * - Quick links for site navigation
+ * - Contact information
+ * - Copyright notice with current year
+ * 
+ * @returns {JSX.Element} Rendered footer with navigation and branding
+ */
 "use client";
 
 import { Activity } from "lucide-react";

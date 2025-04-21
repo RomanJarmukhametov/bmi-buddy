@@ -1,3 +1,32 @@
+/**
+ * Reusable input component with support for validation, measurement units, and accessibility.
+ * Handles different input types, validation states, and provides clear error feedback.
+ * 
+ * Features:
+ * - Required field indication
+ * - Validation error display
+ * - Measurement units display
+ * - Hover and focus states
+ * - Comprehensive accessibility attributes
+ * - Min/max value constraints
+ * 
+ * @param {Object} props - Component props
+ * @param {string} props.label - Input label text
+ * @param {string} props.id - Unique identifier for the input
+ * @param {string} [props.type="text"] - Input type (text, number, etc.)
+ * @param {string|number} props.value - Current input value
+ * @param {Function} props.onChange - Handler for input changes
+ * @param {string} [props.placeholder] - Placeholder text
+ * @param {boolean} [props.required=false] - Whether the field is required
+ * @param {number} [props.min] - Minimum allowed value (for number inputs)
+ * @param {number} [props.max] - Maximum allowed value (for number inputs)
+ * @param {string} [props.unit] - Measurement unit to display
+ * @param {string} [props.className] - Additional CSS classes
+ * @param {string} [props.error] - Error message text
+ * @param {boolean} [props.aria-invalid] - ARIA invalid state
+ * @param {string} [props.aria-describedby] - ID of element that describes this input
+ * @returns {JSX.Element} Styled input component with label and error handling
+ */
 "use client";
 
 import { ChangeEvent } from "react";

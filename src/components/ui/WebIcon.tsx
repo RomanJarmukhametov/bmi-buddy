@@ -1,3 +1,11 @@
+/**
+ * Website/globe icon component.
+ * SVG implementation of a web browser icon used in the footer for website links.
+ * Uses currentColor for color inheritance from parent elements.
+ *
+ * @param {Object} props - SVG props passed directly to the svg element
+ * @returns {JSX.Element} Web globe icon SVG
+ */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 export default function WebIcon(props: any) {
